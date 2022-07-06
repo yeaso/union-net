@@ -1,7 +1,11 @@
 # union-net
-Deep learning model adapted to small data sets
-Union-net: Lightweight deep network model adapted to small data sets. 
-The main author is Dr. He Qingfang (Institute of Computer Science, Beijing Union University)
-Abstract: In real applications, what can be obtained is generally a small data set. At present, most of the practical applications of machine learning use classic models based on big data to solve the problem of small data sets. However, the deep neural network model has complex structure, huge model parameters, and training requires more advanced equipment, which brings certain difficulties to the application. Therefore, Union-net, a lightweight deep network model with a shallow network structure and suitable for small data sets, is proposed.
-Experiments on the model with the public data sets cifar10 and 17flowers show that the proposed Unionnet model can perform well on the classification of large data sets and small data sets, and has high practical value in daily application scenarios.
-Model structure diagram, model source code, pre-trained model, the author will publish here.
+Union-net: Lightweight deep neural network model suitable for small data sets
+
+Jingyi Zhou 1
+
+1 Institute of Scientific and Technical Research on Archives, Beijing, 100050, China 
+
+Abstract
+In recent years, deep learning has developed rapidly in the field of artificial intelligence and has made great achievements. Deep learning can achieve better performance with large data sets. In real applications, it is expensive to obtain big data. Therefore, research on deep learning for small data sets has been paid more and more attention. Judging from the published research results, the tasks of completing small data sets mostly use pre-trained models based on big data, which are realized through migration learning and fine-tuning technologies. There are two risks in using pre-trained models for commercial applications: One is the copyright issue of the pre-trained model or the data sample used by the pre-trained model. The other is that a suitable pre-training model needs to be selected for learning goals in a specific field. Therefore, this paper proposes a lightweight deep network model Union-net that adapts to small data sets. The structure of the model is as follows: Convolutional network units with the same input and different combinations constitute a union module. Each union module is equivalent to a multiple convolution layer (named union convolution in this paper). The serial input and output of three union modules form a  neural network. The results of the parallel output of the three union modules are merged and added, and the result of the addition is used as the input of the last layer of convolutional layer. So as to form a "shallow network" structure. The model can solve the problem of the traditional deep network model that the network is too deep and the conduction path is too long, which leads to the loss of the underlying information transmission. Based on the public data sets CIFAR10 and 17Flower, using multiple classic models and Union-net models, four small data set multi-class classification experiments and one large data set multi-class classification experiment were carried out respectively. The results show that the Union-net model is better than the classic model in the experiments on four small data sets. The code for this paper has been uploaded to https://github.com/yeaso/union-net .
+
+Keywords: small data sets, Deep Learning, pre-trained model, shallow network, CNN model
