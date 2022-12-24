@@ -13,9 +13,8 @@ from keras import backend as K
 chanDim=-1
 class Union_Net:
 	@staticmethod
-	def build(width, height, depth, classes, reg):
-		
-
+	def build(width, height, depth, classes, kernel_reg, kernel_init):
+#width ：图像宽度（以像素为单位）、height ：图像高度、 depth ：图像的通道数、classes ：分类数、kernel_reg : 正则化方法(L1或L2)、kernel_init ：内核初始化程序。
 		inputShape = (height, width, depth)
 
 
