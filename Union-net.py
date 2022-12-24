@@ -83,7 +83,7 @@ class Union_Net:
 		a2 = layers.BatchNormalization(axis=chanDim)(a2)
 
 		m2=layers.add([a2, b2, c2, d2])
-		m22 = Activation('elu')(m2)
+		m22 = Activation('relu')(m2)
 
 		d3 = layers.Conv2D(128, 3, activation="relu", padding="same")(m22)
 		d3 = layers.BatchNormalization(axis=chanDim)(d3)
@@ -115,7 +115,7 @@ class Union_Net:
 		n2=layers.Conv2D(128, 1, padding='same')(m2)
 		n3=layers.Conv2D(128, 1, padding='same')(m3)
 		x=layers.add([n1, n2, n3])
-		x = Activation('elu')(x)
+		x = Activation('relu')(x)
 
 		x = layers.Conv2D(256, 3, activation="relu", padding="same")(x)
 		x = layers.BatchNormalization(axis=chanDim)(x)
